@@ -14,7 +14,7 @@ module.exports = async ctx => {
             })
         }).then(async data => {
             //获取access_token
-            let r = await axios.get('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxced61e8b4ea7c2d9&secret=c6f920efa74d64b6669ffc6e69d7ff3f');
+            let r = await axios.get('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=');
             for (let i in data) {
                 if (ctx.query.count < data[i].remind_count) {
                     //...发送模板消息
